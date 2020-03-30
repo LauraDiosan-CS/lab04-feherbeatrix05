@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ostream>
 #include<string>
 #include "repo.h"
 #include "examen.h"
@@ -20,13 +21,27 @@ void Service::addExamen(char* nume, int nota, int zi, int luna, int an) {
 void Service::deleteExamen(char* nume) {
 	r.deleteExamen(nume);
 }
-void Service::modifyNota(char* nume,int nota) {
-	r.modifyNota(nume, nota);
+void Service::modifyNota(char* nume, int nota, int zi, int luna, int an, int notaNoua) {
+	r.modifyNota(nume, nota, zi, luna, an, notaNoua);
 }
-void Service::modifyData(char* nume, int zi, int luna ,int an) {
-	r.modifyData(nume, zi,luna,an);
+void Service::modifyData(char* nume, int nota,int zi, int luna ,int an, int newZi, int newLuna, int newAn) {
+	r.modifyData(nume,nota, zi,luna,an,newZi,newLuna,newAn);
 }
 
   Examen* Service::listExamene () {
 	   return  r.getAll();
    }
+
+  int Service::getNumarExamene(){
+	  return r.getSize();
+
+  }
+  int Service::getNumarFilterExamene() {
+	  return r.getFilterSize();
+  }
+  Examen* Service::filterNotaMaiMareDecat(int nota) {
+	  return r.filterNotaMaiMareDecat(nota);
+  }
+  void Service::adaugaBonus(char* nume) {
+      return r.adaugaBonus(nume);
+  }

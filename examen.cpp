@@ -36,7 +36,6 @@ Examen::Examen(const Examen& e) {
 
 Examen::~Examen() {
 	if (this->nume) {
-		delete[] this->nume;
 		this->nume = NULL;
 	}
 }

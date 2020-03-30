@@ -142,6 +142,7 @@
     <ClInclude Include="repo.h" />
     <ClInclude Include="service.h" />
     <ClInclude Include="teste.h" />
+    <ClInclude Include="testeService.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="examen.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="repo.cpp" />
     <ClCompile Include="service.cpp" />
     <ClCompile Include="teste.cpp" />
+    <ClCompile Include="testeService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

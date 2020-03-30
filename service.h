@@ -10,9 +10,13 @@ public:
 	~Service();
 	void addExamen(char* nume, int nota, int zi, int luna, int an);
 	void deleteExamen(char* nume);
-	void modifyNota(char* nume, int nota);
-	void modifyData(char* nume, int zi, int luna, int an);
+	void modifyNota(char* nume, int nota,int zi,int luna ,int an ,int notanoua);
+	void modifyData(char* nume, int nota,int zi, int luna, int an,int newZi,int newLuna,int newAn);
 	Examen* listExamene();
+	int getNumarExamene();
+	int getNumarFilterExamene();
+	Examen* filterNotaMaiMareDecat(int nota);
+	void adaugaBonus(char* nume);
 
 };
 
